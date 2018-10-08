@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Hello World!
+title: testing jupyter notebook
 ---
-<h2>{{page.title}}</h2>
-<p># test-jupyter-notebook
+# test-jupyter-notebook
 关于jupyter notebook的一点感受
 
 ---
@@ -37,4 +36,3 @@ title: Hello World!
 * 能用python就不要用anaconda才是好文明
 
 ~~待续~~</p>
-<p>{{page.date|date_to_string}}</p>

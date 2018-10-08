@@ -35,4 +35,4 @@ title: testing jupyter notebook
 * 跟着本地只能用python3跑代码，开始学习python2和python3之间的差别
 * 能用python就不要用anaconda才是好文明
 
-~~待续~~</p>
+~~待续~~

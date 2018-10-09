@@ -1,0 +1,508 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #faf8ef;
+    color: #776e65;
+    font-family: "Microsoft YaHei", sans-serif, 'Microsoft Sans Serif','Microsoft JhengHei UI';
+    font-size: 18px;
+}
+/*基础设置字体颜色布局等元素*/  
+body {
+    margin: 80px 0;
+}
+ 
+input {
+    display: inline-block;
+    background: #71B7B7;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #99B3CC;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+ 
+input[type="text"], input[type="email"] {
+    cursor: auto;
+    background: #99CC99;
+    font-weight: normal;
+    color: #99B3CC;
+    padding: 0 15px;
+}
+/*-webkit-input-placeholder等这里是用来改变默认文字样式颜色的，默认是灰色*/
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
+    color: #9999CC;
+}
+ 
+.heading:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ 
+h1.title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    display: block;
+    float: left;
+	color: #9999CC;
+}
+
+ 
+.scores-container {
+    float: right;
+    text-align: right;
+}
+ 
+.score-container, .best-container {
+    position: relative;
+    display: inline-block;
+    background: #99B3CC;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 25px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+ 
+.score-container:after, .best-container:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #B399CC;
+}
+ 
+.score-container .score-addition, .best-container .score-addition {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(155, 155, 255, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+ 
+.score-container:after {
+    content: "Score";
+}
+ 
+.best-container:after {
+    content: "Best";
+}
+ 
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.65;
+}
+ 
+a {
+    color: #999CCC;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+ 
+strong.important {
+    text-transform: uppercase;
+}
+ 
+hr {
+    border: none;
+    border-bottom: 1px solid #9999CC;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+ 
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+ 
+
+ 
+.game-container {
+    margin-top: 40px;
+    position: relative;
+    padding: 15px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -ms-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    background: #FFCCE6;
+    border-radius: 6px;
+    width: 500px;
+    height: 500px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+.game-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(118, 228, 218, 0.73);
+    z-index: 100;
+    padding-top: 40px;
+    text-align: center;
+    -webkit-animation: fade-in 800ms ease 1200ms;
+    -moz-animation: fade-in 800ms ease 1200ms;
+    animation: fade-in 800ms ease 1200ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+ 
+.game-message p {
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 222px;
+}
+ 
+.game-message .lower {
+    display: block;
+    margin-top: 29px;
+}
+ 
+.game-message .mailing-list {
+    margin-top: 52px;
+}
+ 
+.game-message .mailing-list strong {
+    display: block;
+    margin-bottom: 10px;
+}
+ 
+.game-message .mailing-list .mailing-list-email-field {
+    width: 230px;
+    margin-right: 5px;
+}
+ 
+.game-message a {
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    margin-left: 9px;
+}
+ 
+.game-message a.keep-playing-button {
+    display: none;
+}
+ 
+.game-message .score-sharing {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+ 
+.game-message.game-won {
+    background: rgba(237, 194, 46, 0.5);
+    color: #f9f6f2;
+}
+ 
+.game-message.game-won a.keep-playing-button {
+    display: inline-block;
+}
+ 
+.game-message.game-won, .game-message.game-over {
+    display: block;
+}
+ 
+.game-message.game-won p, .game-message.game-over p {
+    -webkit-animation: slide-up 1.5s ease-in-out 2500ms;
+    -moz-animation: slide-up 1.5s ease-in-out 2500ms;
+    animation: slide-up 1.5s ease-in-out 2500ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+ 
+.game-message.game-won .mailing-list, .game-message.game-over .mailing-list {
+    -webkit-animation: fade-in 1.5s ease-in-out 2500ms;
+    -moz-animation: fade-in 1.5s ease-in-out 2500ms;
+    animation: fade-in 1.5s ease-in-out 2500ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+ 
+.grid-container {
+    position: absolute;
+    z-index: 1;
+	
+}
+ 
+.grid-row {
+    margin-bottom: 15px;
+}
+ 
+.grid-row:last-child {
+    margin-bottom: 0;
+}
+ 
+.grid-row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ 
+.grid-cell {
+    width: 106.25px;
+    height: 106.25px;
+    margin-right: 15px;
+    float: left;
+    border-radius: 3px;
+    background: rgba(153, 153, 255, 0.35);
+}
+ 
+.grid-cell:last-child {
+    margin-right: 0;
+}
+ 
+.tile-container {
+    position: absolute;
+    z-index: 2;
+}
+ 
+.tile, .tile .tile-inner {
+    width: 107px;
+    height: 107px;
+    line-height: 116.25px;
+}
+ 
+.tile.tile-position-1-1 {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+ 
+.tile.tile-position-1-2 {
+    -webkit-transform: translate(0px, 121px);
+    -moz-transform: translate(0px, 121px);
+    transform: translate(0px, 121px);
+}
+ 
+.tile.tile-position-1-3 {
+    -webkit-transform: translate(0px, 242px);
+    -moz-transform: translate(0px, 242px);
+    transform: translate(0px, 242px);
+}
+ 
+.tile.tile-position-1-4 {
+    -webkit-transform: translate(0px, 363px);
+    -moz-transform: translate(0px, 363px);
+    transform: translate(0px, 363px);
+}
+ 
+.tile.tile-position-2-1 {
+    -webkit-transform: translate(121px, 0px);
+    -moz-transform: translate(121px, 0px);
+    transform: translate(121px, 0px);
+}
+ 
+.tile.tile-position-2-2 {
+    -webkit-transform: translate(121px, 121px);
+    -moz-transform: translate(121px, 121px);
+    transform: translate(121px, 121px);
+}
+ 
+.tile.tile-position-2-3 {
+    -webkit-transform: translate(121px, 242px);
+    -moz-transform: translate(121px, 242px);
+    transform: translate(121px, 242px);
+}
+ 
+.tile.tile-position-2-4 {
+    -webkit-transform: translate(121px, 363px);
+    -moz-transform: translate(121px, 363px);
+    transform: translate(121px, 363px);
+}
+ 
+.tile.tile-position-3-1 {
+    -webkit-transform: translate(242px, 0px);
+    -moz-transform: translate(242px, 0px);
+    transform: translate(242px, 0px);
+}
+ 
+.tile.tile-position-3-2 {
+    -webkit-transform: translate(242px, 121px);
+    -moz-transform: translate(242px, 121px);
+    transform: translate(242px, 121px);
+}
+ 
+.tile.tile-position-3-3 {
+    -webkit-transform: translate(242px, 242px);
+    -moz-transform: translate(242px, 242px);
+    transform: translate(242px, 242px);
+}
+ 
+.tile.tile-position-3-4 {
+    -webkit-transform: translate(242px, 363px);
+    -moz-transform: translate(242px, 363px);
+    transform: translate(242px, 363px);
+}
+ 
+.tile.tile-position-4-1 {
+    -webkit-transform: translate(363px, 0px);
+    -moz-transform: translate(363px, 0px);
+    transform: translate(363px, 0px);
+}
+ 
+.tile.tile-position-4-2 {
+    -webkit-transform: translate(363px, 121px);
+    -moz-transform: translate(363px, 121px);
+    transform: translate(363px, 121px);
+}
+ 
+.tile.tile-position-4-3 {
+    -webkit-transform: translate(363px, 242px);
+    -moz-transform: translate(363px, 242px);
+    transform: translate(363px, 242px);
+}
+ 
+.tile.tile-position-4-4 {
+    -webkit-transform: translate(363px, 363px);
+    -moz-transform: translate(363px, 363px);
+    transform: translate(363px, 363px);
+}
+  
+.tile {
+    position: absolute;
+    -webkit-transition: 100ms ease-in-out;
+    -moz-transition: 100ms ease-in-out;
+    transition: 100ms ease-in-out;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+}
+ 
+.tile .tile-inner {
+    border-radius: 3px;
+    background: #eee4da;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    font-size: 40px;
+}
+ 
+.tile.tile-2 .tile-inner {
+    background: #FFFFCC;
+}
+ 
+.tile.tile-4 .tile-inner {
+    background: #8FFF8F;
+	color: #8FCC8F;
+}
+ 
+.tile.tile-8 .tile-inner {
+    color: #FFCCFF;
+    background: #99CCFF;
+}
+ 
+.tile.tile-16 .tile-inner {
+    color: #CC99FF;
+    background: #FF9999;
+}
+ 
+.tile.tile-32 .tile-inner {
+    color: #FFC999;
+    background: #5CFFAD;
+}
+ 
+.tile.tile-64 .tile-inner {
+    color: #FF5CAD;
+    background: #5CFFAD;
+}
+ 
+ 
+.tile.tile-128 .tile-inner {
+    color: #5CFFAD;
+    background: #FF99FF;
+}
+ 
+ 
+.tile.tile-256 .tile-inner {
+    color: #CCFF99;
+    background: #9999FF;
+}
+
+ 
+.tile.tile-512 .tile-inner {
+    color: #FFCCE6;
+    background: #FF8FFF;
+}
+
+.tile.tile-1024 .tile-inner {
+    color: #B399CC;
+    background: #9999CC;
+}
+  
+.tile.tile-2048 .tile-inner {
+    color: #CC99B3;
+    background: #CC99CC;
+}
+
+.tile.tile-super .tile-inner {
+    color: #99B3CC;
+    background: #7171B7;
+}
+  
+.restart-button {
+    display: inline-block;
+    background: #9999CC;;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    float: right;
+}
+ 
+

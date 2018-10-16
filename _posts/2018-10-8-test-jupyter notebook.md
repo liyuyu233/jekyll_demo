@@ -36,3 +36,5 @@ title: testing jupyter notebook
 * 能用python就不要用anaconda才是好文明
 
 ~~待续~~
+
+if error， repair python

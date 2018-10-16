@@ -401,7 +401,6 @@ end
 % 建立f(x)函数
 function f=f(x)
 % 写fx
-end
 % 建立需要求解的函数
 function f0=f0(x)
 C=f(x);
